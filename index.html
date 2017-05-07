@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>长江大学教务处</title>
+  <link rel="stylesheet" href="css/desktop.css">
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="javascript/index.js" charset="utf-8"></script>
+</head>
+<body>
+  <div class="title-bar">
+    <div class="title-container">
+      <div class="title-build">
+        <div class="menu">
+          <div class="menu01"></div>
+          <div class="menu02"></div>
+          <div class="menu03"></div>
+        </div>
+        <a href="login.html"><img class="title-logo" src="img/logo.jpg" alt="logo"></a>
+      </div>
+      <div class="title-form">
+        <form>
+          <input class="search-border" id="search-border" type="text" placeholder="搜索课程、教室、服务类别">
+          <button class="search-button" type="search">查询</button>
+        </form>
+      </div>
+      <div class="title-name">
+        <p>欢迎来到长大教务处，张安然</p>
+        <img src="img/index-headPhoto.png" alt="张安然">
+      </div>
+    </div>
+  </div>
+  <nav>
+    <ul>
+      <li id="grade"><a href="#" >个人成绩</a></li>
+      <li id="course"><a href="#" >课表查询</a></li>
+      <li id="apply"><a href="#" >考试安排</a></li>
+      <li id="classroom"><a href="#" >教室查询</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <aside>
+      <div class="content">
+        <ul class="first-step">
+          <li><a id="fs-student"><img id="img-student" src="img/index-slide-student.png" alt="学籍"><img id="img-student-ac" src="img/index-slide-student_active.png" alt="学籍">学籍管理</a>
+            <ul class="second-step" id="ss-student">
+              <li>学生信息查询</li>
+              <li>班级成绩查询</li>
+              <li>个人信息核对</li>
+              <li>补考及重修</li>
+            </ul>
+          </li>
+          <li><a id="fs-choose"><img id="img-choose" src="img/index-slide-choose.png" alt="选课"><img id="img-choose-ac" src="img/index-slide-choose_active.png" alt="选课">选课管理</a>
+            <ul class="second-step" id="ss-choose">
+              <li>学生选课</li>
+              <li>选课查询</li>
+              <li>网上评教</li>
+              <li>公选课教师</li>
+            </ul>
+         </li>
+          <li><a id="fs-teach"><img id="img-teach" src="img/index-slide-teach.png" alt="教务"><img id="img-teach-ac" src="img/index-slide-teach_active.png" alt="教务">教务管理</a>
+            <ul class="second-step" id="ss-teach">
+              <li>校历及作息时间</li>
+              <li>人才培养计划</li>
+              <li>教学计划</li>
+              <li>教学任务</li>
+            </ul>
+          </li>
+          <li><a id="fs-exam"><img id="img-exam" src="img/index-slide-exam.png" alt="考务"><img id="img-exam-ac" src="img/index-slide-exam_active.png" alt="考务">考务管理</a>
+            <ul class="second-step" id="ss-exam">
+              <li>CET报名申请</li>
+              <li>CET报名汇总</li>
+              <li>四六级监考老师</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="setting">
+        <ul>
+          <li id="ss-setting">系统设置</li>
+          <div></div>
+          <li id="ss-help">查看帮助</li>
+          <div></div>
+          <li id="ss-logout">退出登录</li>
+          <div></div>
+        </ul>
+      </div>
+    </aside>
+    <article class="article-grade">
+      <div class="art-menu">
+        <div class="selector-group">
+          <button id="se-all" class="btn-study">全部成绩</button>
+          <button id="se-degree" class="btn-study">学位课成绩</button>
+          <button id="se-required" class="btn-study">必修课成绩</button>
+        </div>
+        <div class="query">
+          <p>学年：</p>
+          <form>
+            <select class="year" name="year">
+              <option value="1">2014</option>
+              <option value="1">2015</option>
+              <option value="1">2016</option>
+              <option value="1">2017</option>
+            </select>
+            <button type="submit">查询</button>
+          </form>
+          <div class="choose-term">
+            <button id="up-term" class="term-btn">上</button>
+            <button id="lower-term" class="term-btn">下</button>
+          </div>
+        </div>
+      </div>
+      <table id="table-grade">
+        <thead>
+          <tr>
+            <th>课程名称</th>
+            <th>成绩</th>
+            <th>学分</th>
+            <th>年度</th>
+            <th>学期</th>
+            <th>类别</th>
+          </tr>
+        </thead>
+        <tbody id="grade-body">
+          <tr class="item-grade">
+            <td>中国近现代史纲要</td>
+            <td>99.00</td>
+            <td>2.0</td>
+            <td>2014</td>
+            <td>上</td>
+            <td>必修</td>
+          </tr>
+          <tr class="item-grade">
+            <td>高等数学A（上）</td>
+            <td>99.00</td>
+            <td>5.5</td>
+            <td>2014</td>
+            <td>上</td>
+            <td>分级</td>
+          </tr>
+          <tr class="item-grade">
+            <td>大学英语A（上）</td>
+            <td>99.00</td>
+            <td>5.0</td>
+            <td>2014</td>
+            <td>上</td>
+            <td>分级</td>
+          </tr>
+          <tr class="item-grade">
+            <td>高等数学A（下）</td>
+            <td>99.00</td>
+            <td>5.5</td>
+            <td>2014</td>
+            <td>下</td>
+            <td>分级</td>
+          </tr>
+          <tr class="item-grade">
+            <td>大学英语A（下）</td>
+            <td>99.00</td>
+            <td>5.0</td>
+            <td>2014</td>
+            <td>下</td>
+            <td>分级</td>
+          </tr>
+          <tr class="item-grade">
+            <td>管理学原理</td>
+            <td>99.00</td>
+            <td>2.0</td>
+            <td>2014</td>
+            <td>下</td>
+            <td>必修</td>
+          </tr>
+          <tr class="item-grade">
+            <td>政务礼仪</td>
+            <td>99.00</td>
+            <td>2.0</td>
+            <td>2015</td>
+            <td>上</td>
+            <td>必修</td>
+          </tr>
+          <tr class="item-grade">
+            <td>会计学原理</td>
+            <td>99.00</td>
+            <td>3.5</td>
+            <td>2015</td>
+            <td>上</td>
+            <td>必修</td>
+          </tr>
+          <tr class="item-grade">
+            <td>微观经济学</td>
+            <td>99.00</td>
+            <td>3.5</td>
+            <td>2015</td>
+            <td>上</td>
+            <td>必修</td>
+          </tr>
+          <tr class="item-grade">
+            <td>宏观经济学</td>
+            <td>99.00</td>
+            <td>3.0</td>
+            <td>2015</td>
+            <td>下</td>
+            <td>必修</td>
+          </tr>
+          <tr class="item-grade">
+            <td>概率论与数理统计</td>
+            <td>99.00</td>
+            <td>3.0</td>
+            <td>2015</td>
+            <td>下</td>
+            <td>必修</td>
+          </tr>
+          <tr class="item-grade">
+            <td>政治学原理</td>
+            <td>99.00</td>
+            <td>3.0</td>
+            <td>2015</td>
+            <td>下</td>
+            <td>必修</td>
+          </tr>
+          <tr class="item-grade">
+            <td>行政法学</td>
+            <td>99.00</td>
+            <td>3.5</td>
+            <td>2015</td>
+            <td>下</td>
+            <td>必修</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+    <article class="article-schedule">
+      <div class="schedule-menu">
+        <form>
+          <p id="sc-year">学年：</p>
+          <select class="year" name="year">
+            <option value="1">2014</option>
+            <option value="2">2015</option>
+            <option value="3">2016</option>
+            <option value="4">2017</option>
+          </select>
+          <div class="choose-term">
+            <button id="term-up" class="term-btn">上</button>
+            <button id="term-lower" class="term-btn">下</button>
+          </div>
+          <p>学院：</p>
+          <select class="college" name="college">
+            <option value="1">管理学院</option>
+            <option value="2">计算机科学学院</option>
+            <option value="3">教育学院</option>
+            <option value="4">农学院</option>
+          </select>
+          <p>班级：</p>
+          <select class="college" name="college">
+            <option value="1">公管11401</option>
+            <option value="2">公管11402</option>
+            <option value="3">物流11401</option>
+            <option value="4">物流11402</option>
+          </select>
+        </form>
+      </div>
+      <div class="schedule">
+        <table>
+          <thead>
+            <tr>
+              <th>星期一</th>
+              <th>星期二</th>
+              <th>星期三</th>
+              <th>星期四</th>
+              <th>星期五</th>
+              <th>星期六</th>
+              <th>星期天</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="item-grade">
+              <td></td>
+              <td></td>
+              <td>公共管理案例分析</td>
+              <td>公共事业管理学</td>
+              <td>社会保障学</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="item-grade">
+              <td></td>
+              <td>公共事业管理学</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>C语言程序设计</td>
+            </tr>
+            <tr class="item-grade">
+              <td>社会调查方法</td>
+              <td></td>
+              <td>公文写作与处理</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="item-grade">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>VB程序设计与实践</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+    <div class="classmate">
+      <div class="personal">
+        <div class="info">
+          <h2>当前用户</h2>
+          <div class="name item">
+            <a>姓名</a>
+            <p>张安然</p>
+          </div>
+          <div class="class item">
+            <a>班级</a>
+            <p>公管11401班</p>
+          </div>
+          <div class="number item">
+            <a>学号</a>
+            <p>201402604</p>
+          </div>
+        </div>
+        <div class="copy">
+          <button>复制信息</button>
+        </div>
+      </div>
+      <div class="address">
+        <h2>同学录</h2>
+        <div class="list">
+          <div class="item">
+            <img src="img/index-classmate-01.png" class="head" alt="头像">
+            <div class="info">
+              <a>泽东</a><span>.201402600</span>
+              <div class="job">
+                <img src="img/index-clssmate-book.png">
+                <p>本班班长</p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="img/index-classmate-02.png" class="head" alt="头像">
+            <div class="info">
+              <a>泽民</a><span>.201402600</span>
+              <div class="job">
+                <img src="img/index-clssmate-book.png">
+                <p>本班团支书</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="img/index-classmate-03.png" class="head" alt="头像">
+            <div class="info">
+              <a>锦涛</a><span>.201402600</span>
+              <div class="job">
+                <img src="img/index-clssmate-book.png">
+                <p>本班学习委员</p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="img/index-classmate-04.png" class="head" alt="头像">
+            <div class="info">
+              <a>国锋</a><span>.201402600</span>
+              <div class="job">
+                <img src="img/index-clssmate-book.png">
+                <p>本班体育委员</p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="img/index-classmate-01.png" class="head" alt="头像">
+            <div class="info">
+              <a>近平</a><span>.201402600</span>
+              <div class="job">
+                <img src="img/index-clssmate-book.png">
+                <p>本班成员</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

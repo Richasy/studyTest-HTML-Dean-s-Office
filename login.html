@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/login.css">
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="javascript/login.js" charset="utf-8"></script>
+  <title>长江大学教务处</title>
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <div class="shade"> </div>
+      <div class="introduce">
+        <h1>欢迎登录<br>长江大学教务处</h1>
+        <p>长大了上长大，欢迎来到长江大学就读。现在让我们进入教务处看看你的学习进展吧！</p>
+      </div>
+      <div class="btn-group">
+        <button class="btn" id="btn-home">设为首页</button>
+        <button class="btn" id="btn-other">浏览其他</button>
+      </div>
+    </div>
+    <div class="right">
+      <img src="img/logo.jpg" alt="LOGO" class="logo">
+      <h2>登录</h2>
+      <form action="index.html">
+        <input type="text" id="username" placeholder="请输入学号">
+        <input type="password" id="password" placeholder="请输入密码">
+        <button type="submit" class="btn" id="btn-login">登录</button>
+      </form>
+      <div class="switcher">
+        <button class="switch" id="btn-student">学生</button>
+        <button class="switch" id="btn-admin">管理员</button>
+        <button class="switch" id="btn-teacher">教师</button>
+      </div>
+      <p>教务管理系统登录入口<br>(所有功能菜单必须登陆后才能使用)</p>
+    </div>
+  </div>
+</body>
+</html>
